@@ -2,6 +2,9 @@
   "name": "htmltojsx-loader",
   "version": "0.0.1",
   "author": "Hiroyuki ANAI <pirosikick@gmail.com>",
+  "dependencies": {
+    "htmltojsx": "^0.2.2"
+  },
   "devDependencies": {
     "babel": "^5.6.23",
     "babel-eslint": "^3.1.23",
@@ -18,14 +21,15 @@
   ],
   "license": "MIT",
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pirosikick/htmltojsx-loader.git"
+  },
   "scripts": {
     "build": "babel src -d lib",
     "fixpack": "fixpack",
     "lint": "eslint src test",
     "test": "npm run build && mocha test/ --recursive --compilers js:espower-babel/guess",
     "watch": "babel src -d lib -w & mocha --compilers js:espower-babel/guess -w"
-  },
-  "dependencies": {
-    "htmltojsx": "^0.2.2"
   }
 }
